@@ -3,14 +3,59 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: flex-start;
+  min-height: 100vh;
   margin: 0;
+}
+
+#game-title {
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 36px 0 18px 0;
+  text-shadow: 0 2px 8px #000a;
 }
 
 #game-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+#player-name {
+  padding: 4px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #888;
+  outline: none;
+  width: 120px;
+}
+#player-name:focus {
+  border: 1.5px solid #0057ff;
+}
+
+#difficulty {
+  padding: 4px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #888;
+}
+
+.canvas-wrapper {
+  position: relative;
   display: inline-block;
+  margin-bottom: 0;
 }
 
 #pong {
@@ -23,7 +68,7 @@ body {
 
 #score {
   position: absolute;
-  top: 16px;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -32,4 +77,56 @@ body {
   user-select: none;
   pointer-events: none;
   text-shadow: 0 1px 0 #000, 0 2px 8px #000a;
+  z-index: 2;
+}
+
+#timer {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #eee;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4rem;
+  user-select: none;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #000, 0 2px 8px #000a;
+  z-index: 2;
+}
+
+#buttons {
+  margin: 16px auto 0 auto;
+  text-align: center;
+}
+
+#buttons button {
+  font-size: 1.2rem;
+  margin: 0 6px;
+  padding: 4px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#buttons button:disabled {
+  background: #555;
+  color: #aaa;
+  cursor: not-allowed;
+}
+#buttons button:not(:disabled):hover {
+  background: #0057ff;
+}
+
+#history {
+  margin-top: 20px;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  max-width: 800px;
+  background: #222b;
+  border-radius: 8px;
+  padding: 12px 22px 8px 22px;
+  display: none;
 }
