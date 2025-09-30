@@ -130,3 +130,17 @@ body {
   padding: 12px 22px 8px 22px;
   display: none;
 }
+#history table {
+  width: 100%;
+  border-spacing: 0;
+  margin-top: 6px;
+}
+#history th, #history td {
+  text-align: center;
+  padding: 2px 6px;
+}
+#history th {
+  color: #7fd6ff;
+  font-weight: 500;
+  font-size: 1.08em;
+}
