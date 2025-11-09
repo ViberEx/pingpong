@@ -310,3 +310,4 @@ window.onload = function () {
   drawPaddle(rightPaddle);
   drawBall(ball);
 };
+
