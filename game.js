@@ -184,15 +184,15 @@ function showHistory() {
   }
   let html = `<b>历史成绩:</b><br/><table><tr><th>昵称</th><th>玩家得分</th><th>AI得分</th><th>用时</th><th>难度</th></tr>`;
   historyRecords.forEach((h) => {
-    html += `<tr>`+
-      `<td>${h.player}</td>`+
-      `<td>${h.left}</td>`+
-      `<td>${h.right}</td>`+
-      `<td>${h.time}</td>`+
-      `<td>${h.difficulty}</td>`+
-    `</tr>`;
+    html += `<tr>
+      <td>${h.player}</td>
+      <td>${h.left}</td>
+      <td>${h.right}</td>
+      <td>${h.time}</td>
+      <td>${h.difficulty}</td>
+    </tr>`;
   });
-  html += "</table";
+  html += "</table>";
   historyDiv.innerHTML = html;
   historyDiv.style.display = "block";
 }
@@ -310,3 +310,4 @@ window.onload = function () {
   drawPaddle(rightPaddle);
   drawBall(ball);
 };
+
